@@ -1,4 +1,4 @@
-declare module "slide-carousel" {
+declare module "slide-carousel-video" {
   export default class CarouselBuilder {
     constructor(container: HTMLElement);
 
