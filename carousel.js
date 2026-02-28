@@ -347,14 +347,14 @@ class CarouselBuilder {
   constructor(container) {
     this.container = container;
     this._options = {
-      images: [],
+      videos: [],
       interval: 2000,
       autoPlay: true,
     };
   }
 
-  setImages(images) {
-    this._options.images = images;
+  setVideos(videos) {
+    this._options.videos = videos;
     return this;
   }
 
@@ -403,18 +403,25 @@ export default class Carousel {
 
     const slidesWrapper = this.container.querySelector(".slides");
 
-    this.options.images.forEach((src, i) => {
+    this.options.videos.forEach((src, i) => {
       const slide = document.createElement("div");
       slide.className = "slide";
       if (i === 0) slide.dataset.current = true;
       else if (i === 1) slide.dataset.next = true;
-      else if (i === this.options.images.length - 1)
+      else if (i === this.options.videos.length - 1)
         slide.dataset.previous = true;
 
       slide.innerHTML = `
         <div class="slide-inner">
           <div class="slide-image-wrapper">
-            <img src="${src}" alt="slide ${i}" class="slide-image"/>
+		  	<video autoplay 
+				muted 
+				loop 
+				playsinline 
+				preload="auto"
+				style="width: 100%; height: 100%; object-fit: cover;">
+				<source src="${src}" type="video/mp4">
+			</video>
           </div>
         </div>
       `;

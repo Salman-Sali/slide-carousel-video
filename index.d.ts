@@ -4,7 +4,7 @@ declare module "slide-carousel" {
 
     static builder(container: HTMLElement): CarouselBuilder;
 
-    setImages(images: string[]): this;
+    setVideos(videos: string[]): this;
     setInterval(ms: number): this;
     setAutoPlay(flag: boolean): this;
     build(): any;

@@ -1,9 +1,9 @@
 {
-  "name": "slide-carousel",
+  "name": "slide-carousel-video",
   "version": "1.0.8",
-  "description": "Slide carousel with vanilla JavaScript",
+  "description": "Slide carousel for video with vanilla JavaScript",
   "license": "MIT",
-  "author": "Baseem ali",
+  "author": "Salman Sali",
   "types": "./index.d.ts",
   "type": "module",
   "main": "carousel.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baseem-blip/slide-carousel.git"
+    "url": "git+https://github.com/Salman-Sali/slide-carousel-video.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
